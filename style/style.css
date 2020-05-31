@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyBh15L6ZQVrZVsMjwAhb_3-X6bbgpSGtQk&center=47.65,-122.35&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xebe3cd&style=element:labels.text.fill%7Ccolor:0x523735&style=element:labels.text.stroke%7Ccolor:0xf5f1e6&style=feature:administrative%7Celement:geometry.stroke%7Ccolor:0xc9b2a6&style=feature:administrative.land_parcel%7Celement:geometry.stroke%7Ccolor:0xdcd2be&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xae9e90&style=feature:landscape.natural%7Celement:geometry%7Ccolor:0xdfd2ae&style=feature:poi%7Celement:geometry%7Ccolor:0xdfd2ae&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x93817c&style=feature:poi.park%7Celement:geometry.fill%7Ccolor:0xa5b076&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x447530&style=feature:road%7Celement:geometry%7Ccolor:0xf5f1e6&style=feature:road.arterial%7Celement:geometry%7Ccolor:0xfdfcf8&style=feature:road.highway%7Celement:geometry%7Ccolor:0xf8c967&style=feature:road.highway%7Celement:geometry.stroke%7Ccolor:0xe9bc62&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0xe98d58&style=feature:road.highway.controlled_access%7Celement:geometry.stroke%7Ccolor:0xdb8555&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x806b63&style=feature:transit.line%7Celement:geometry%7Ccolor:0xdfd2ae&style=feature:transit.line%7Celement:labels.text.fill%7Ccolor:0x8f7d77&style=feature:transit.line%7Celement:labels.text.stroke%7Ccolor:0xebe3cd&style=feature:transit.station%7Celement:geometry%7Ccolor:0xdfd2ae&style=feature:water%7Celement:geometry.fill%7Ccolor:0xb9d3c2&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x92998d&size=480x360);
+}
+
+#map {
+    height: 100vh;
+}
+
+.title {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    font-size: 88px;
+    z-index: 10;
+    font-weight: 550;
+    text-transform: uppercase;
+    color: #333333;
+    font-family: Calibri;
+}
+
+.search-container {
+    width: 400px;
+    height: 60px;
+    background-color: #454E53;
+    position: absolute;
+    z-index: 30;
+    top: 230px;
+    left: 100px;
+    border-radius: 30px;
+}
+
+.search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.search input {
+    width: 100%;
+font-size: 25px;
+border: none;
+color: #fff;
+background: transparent;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search i {
+    color: white;
+    font-size: 25px;
+}
+
+.stores-list-container {    
+width: 400px;
+background-color: #A6D785;
+position: absolute;
+z-index: 30;
+top: 320px;
+left: 100px;
+border-radius: 32px;
+bottom:20px;
+/*padding: 30px 20px;*/
+}  
+   
+ .flex-stores {
+       display: flex;
+       flex-wrap: wrap;
+   }
+
+.stores-list {
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.store-container {
+    display: flex;
+    border-bottom: 1px solid #979797;
+    cursor: pointer;
+}
+
+
+
+.store-info-container {
+    flex-grow: 1;
+}
+
+.store-number {
+    width: 30px;
+    height: 30px;
+    background-color: #454E53;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.store-address {
+    font-size: 21px;
+    color: #514C4C;
+    padding: 10px;
+    /*margin-top: 30px from live video*/
+   }
+
+a {
+    text-decoration: none;
+    color: #514C4C;
+}
+
+.store-phone-number {
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.store-number-container {
+    align-items: center;
+    display: flex;
+}
+
+.store-address span {
+    display: block;
+}
+
+.phone-add-sect{
+    display: inline-block;
+}
+
+i.icon-style {
+background-color: dodgerblue;
+border-radius: 50%;
+width: 30px;
+height: 30px;
+color: #fff;
+text-align: center;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.title-name {
+font-size: 20px;
+padding-bottom: 10px;
+}
+
+.open-time {
+color: #B5ADAD;
+padding-bottom: 5px;
+border-bottom: 1px solid #B5ADAD;
+}
+
+.store-info-window {
+    min-width: 300px;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.store-info-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.87);
+}
+
+.store-info-status {
+    margin-top: 6px;
+    border-bottom: 1px solid #000000a2;
+    padding-bottom: 6px;
+}
+
+
+.store-info-address, .store-info-phone {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.store-info-address .circle, .store-info-phone .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #198511;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.store-container-background {
+    width: 100%;
+    display: flex;
+    padding-left: 8px; 
+    padding-right: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 18px;
+    transition: background 0.2s ease-in;  /*meaning transition all elements for 0.2seconds using 'ease in' method */
+ }
+
+ .store-container-background:hover {
+    background-color: #ccc;
+ }
